@@ -6,7 +6,7 @@ Pipeline: transcrições `.md` → índice de temas → roteiro → artes (Codex
 
 ```
 seu-projeto/
-├── aulas/                    ← suas transcrições .md
+├── base_docs/<curso>/        ← transcrições .md + o ebook em PDF
 ├── indice.json               ← gerado pela skill indexar-aulas
 ├── carrosseis/
 │   └── <slug>/
@@ -15,8 +15,11 @@ seu-projeto/
 │       ├── slides/           ← 1080x1440
 │       ├── slides-story/     ← 1080x1920
 │       └── legenda.txt
+├── saida/<slug>/             ← entrega pronta pro Google Drive
 ├── template.html
 ├── render.mjs
+├── exportar.mjs
+├── status.mjs
 └── .claude/skills/
     ├── indexar-aulas/SKILL.md
     └── carrossel/SKILL.md
@@ -37,6 +40,9 @@ Copie `skills/` para `.claude/skills/` do seu projeto.
 > indexar as aulas
 > faz um carrossel sobre aliança
 ```
+
+Depois de renderizar, `node exportar.mjs <slug>` monta a pasta de entrega em
+`saida/<slug>/`, e `node status.mjs` mostra o que já saiu e o que falta.
 
 Ou renderizar direto, sem passar pelo Claude:
 
@@ -70,6 +76,11 @@ módulo em vertical e a marca dourada avançando a cada slide. Ela não é
 decoração nem barra de progresso — é a afirmação de que todo slide vem de
 uma aula real, com origem rastreável. É o mesmo princípio do campo `origem`
 no roteiro, só que visível pra quem lê.
+
+**A assinatura no rodapé.** O `@` do Instagram em mono, no canto inferior
+esquerdo, no mesmo peso do marcador de posição. Nenhum nome de pessoa entra
+no slide: o crédito do fecho nomeia a instituição e o curso onde o conteúdo
+foi estudado. O carrossel é ensino de segunda mão, assumido como tal.
 
 **A regra que não se quebra:** texto vive no template, nunca na imagem
 generativa. A arte entra escurecida e dessaturada, como atmosfera atrás do

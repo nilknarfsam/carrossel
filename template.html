@@ -75,7 +75,7 @@
   /* ---- conteúdo ---- */
   .corpo{
     position:relative; z-index:2;
-    padding:var(--pad) var(--pad) var(--pad) 56px;
+    padding:var(--pad) var(--pad) calc(var(--pad) + 78px) 56px;
     display:flex; flex-direction:column; justify-content:flex-end;
     gap:36px;
   }
@@ -136,6 +136,13 @@
   }
   .credito strong{ color:var(--osso); font-weight:500; }
 
+  /* assinatura de quem publica — mesmo peso do marcador, canto oposto */
+  .assinatura{
+    position:absolute; left:calc(var(--rail) + 56px); bottom:var(--pad); z-index:3;
+    font-family:'IBM Plex Mono',monospace;
+    font-size:20px; letter-spacing:.12em; color:var(--osso-fosco);
+  }
+
   .marcador{
     position:absolute; right:var(--pad); top:var(--pad); z-index:3;
     font-family:'IBM Plex Mono',monospace;
@@ -153,6 +160,7 @@ const esc = s => String(s ?? "").replace(/[&<>]/g, c => ({'&':'&amp;','<':'&lt;'
 const mk  = s => esc(s).replace(/\*\*(.+?)\*\*/g, "<em>$1</em>");
 
 const total = R.slides.length;
+const assinatura = R.assinatura ?? "";
 
 document.body.innerHTML = R.slides.map((s, i) => {
   const passo   = 100 / total;
@@ -190,6 +198,7 @@ document.body.innerHTML = R.slides.map((s, i) => {
       <div class="ref">${ref}</div>
     </div>
     <div class="marcador">${String(i+1).padStart(2,"0")} / ${String(total).padStart(2,"0")}</div>
+    ${assinatura ? `<div class="assinatura">${esc(assinatura)}</div>` : ""}
     <div class="corpo">${bloco}</div>
   </section>`;
 }).join("");

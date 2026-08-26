@@ -46,6 +46,27 @@ Regras de escrita:
 - Se algum slide precisar de uma afirmação que a aula não sustenta:
   não inventar. Cortar o slide ou avisar que aquele ponto ficou fora.
 
+### Conferir antes de escrever
+
+As transcrições são ASR e erram feio em nome próprio, data e citação
+("Inisseia" = Niceia, "ao gusto estronde" = Augustus Strong). O argumento da
+aula é confiável; a grafia não.
+
+Cada curso tem o **ebook em PDF** na mesma pasta da transcrição, e é ele que
+manda. Antes de escrever o roteiro:
+
+```bash
+pdftotext -layout -enc UTF-8 "base_docs/<curso>/<ebook>.pdf" ebook.txt
+grep -n -i "<termo>" ebook.txt
+```
+
+Todo nome próprio, data, termo técnico e referência bíblica que for para um
+slide precisa aparecer no ebook com essa grafia. O que só existe na
+transcrição entra como argumento, nunca como citação literal.
+
+Referência bíblica que o professor não citou e o ebook não traz: ou fica de
+fora, ou vai para o Franklin conferir na tradução dele antes de renderizar.
+
 Mostrar o roteiro no chat e **esperar aprovação** antes de seguir.
 
 ## 3. Gerar as artes
@@ -104,8 +125,19 @@ node exportar.mjs <slug>
 
 - Reportar o caminho dos arquivos.
 
-## Crédito
+## Autoria e assinatura
 
-Todo carrossel leva crédito ao professor e ao curso — no slide de `fecho`
-e na legenda. Se o `indice.json` não tiver o nome do professor, perguntar
-antes de gerar.
+O autor do carrossel é o Franklin: ele estudou o curso e está reescrevendo o
+conteúdo mastigado para quem não vai assistir sete aulas. Não é uma citação
+de professor — é ensino de segunda mão, assumido como tal.
+
+- **Nenhum nome de pessoa nos slides.** Nem o do Franklin, nem o do professor.
+- A identidade é o **@ do Instagram no rodapé**, em todo slide: campo
+  `assinatura` no roteiro, hoje `@samfiledsoak`.
+- No `fecho`, o campo `credito` diz **onde o conteúdo foi estudado** — a
+  instituição e o curso, não uma pessoa. É o que separa "reescrevi o que
+  aprendi" de "inventei".
+- A legenda repete a fonte por extenso.
+
+Se um dia o carrossel não vier de um curso (assunto próprio, outro tema),
+o `credito` sai e sobra a assinatura.

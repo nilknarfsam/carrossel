@@ -3,6 +3,7 @@
   "modulo": "Módulo 3 · Aula 07",
   "tema": "A aliança como estrutura da narrativa bíblica",
   "slug": "alianca-estrutura-narrativa",
+  "assinatura": "@samfiledsoak",
   "legenda": "Texto da legenda do post, com os créditos ao final.",
   "hashtags": ["#teologia", "#estudobiblico"],
   "slides": [
@@ -18,7 +19,7 @@
       "tipo": "ponto",
       "sobrancelha": "O termo",
       "frase": "**Berith** não descreve um acordo entre iguais.",
-      "apoio": "No mundo do Antigo Oriente Próximo, o termo pertence ao vocabulário dos tratados entre um rei e um povo — quem estabelece os termos é sempre o lado mais forte.",
+      "apoio": "No Antigo Oriente Próximo é vocabulário de tratado entre um rei e um povo. Quem dita os termos é sempre o lado mais forte.",
       "arte": "assets/02-fundo.png",
       "origem": "aulas/mod3-aula07.md · linhas 63-91"
     },
@@ -40,7 +41,7 @@
     {
       "tipo": "fecho",
       "frase": "Ler a Bíblia sem a aliança é ler o contrato pulando as cláusulas.",
-      "credito": "Conteúdo baseado na aula do <strong>Prof. [nome]</strong> — [curso]. Adaptado para este formato.",
+      "credito": "Estudado no <strong>[instituição]</strong> — [curso]. Reescrito para este formato.",
       "arte": "assets/05-fundo.png",
       "origem": "aulas/mod3-aula07.md · linhas 152-160"
     }

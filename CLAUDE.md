@@ -34,7 +34,11 @@ válido, serve pra validar tipografia antes de gerar imagem.
 - Ouro (`#C8A22B`) só em três lugares: sobrancelha, termo grifado, marca da trilha.
 - Frase estourou o slide? Encurtar a frase — nunca diminuir a fonte.
 - Campo `origem` obrigatório em todo slide (arquivo + linhas da transcrição).
-- Todo carrossel leva crédito ao professor e ao curso.
+- **Nenhum nome de pessoa nos slides.** A assinatura é o `@` do Instagram no
+  rodapé (`assinatura` no roteiro, hoje `@samfiledsoak`); o `credito` do fecho
+  nomeia a instituição e o curso onde o conteúdo foi estudado, não uma pessoa.
+- Nome próprio, data, termo técnico e referência bíblica se conferem no **ebook
+  em PDF** do curso antes de virar slide — a transcrição é ASR e erra grafia.
 
 ## Entregar (pasta pro Google Drive)
 
@@ -46,3 +50,12 @@ Monta `saida/<slug>/` com `feed/` (1080x1440), `story/` (1080x1920),
 `legenda.txt` e `LEIA-ME.txt`. Os PNGs saem renomeados com o slug, pra não
 virarem um monte de `01.png` indistinguível dentro do Drive. A pasta `saida/`
 não vai pro git — ela é a entrega, não o código.
+
+## Acompanhar o que já saiu
+
+```bash
+node status.mjs
+```
+
+Cruza o `indice.json` com as pastas em `carrosseis/` e mostra, por aula, o que
+já virou carrossel, o que está em rascunho e o que ainda está na fila.
