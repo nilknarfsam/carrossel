@@ -22,8 +22,10 @@ Pipeline: transcrições em `base_docs/` → `indice.json` → `carrosseis/<slug
 ## Renderizar
 
 ```bash
-node render.mjs carrosseis/<slug>/roteiro.json --ambos
+node render.mjs carrosseis/<slug>/roteiro.json
 ```
+
+Só feed (1080x1440). Story (`--story` / `--ambos`) só sob pedido explícito.
 
 Slide sem arte renderiza no ultramarino chapado — isso é um resultado
 válido, serve pra validar tipografia antes de gerar imagem.
@@ -48,8 +50,8 @@ válido, serve pra validar tipografia antes de gerar imagem.
 node exportar.mjs <slug>      # ou --todos
 ```
 
-Monta `saida/<slug>/` com `feed/` (1080x1440), `story/` (1080x1920),
-`legenda.txt` e `LEIA-ME.txt`. Os PNGs saem renomeados com o slug, pra não
+Monta `saida/<slug>/` com `feed/` (1080x1440), `legenda.txt` e `LEIA-ME.txt`.
+A pasta `story/` só aparece se o story tiver sido renderizado. Os PNGs saem renomeados com o slug, pra não
 virarem um monte de `01.png` indistinguível dentro do Drive. A pasta `saida/`
 não vai pro git — ela é a entrega, não o código.
 

@@ -113,10 +113,11 @@ checklist do `arte.md`.
 ## 4. Renderizar
 
 ```bash
-node render.mjs carrosseis/<slug>/roteiro.json --ambos
+node render.mjs carrosseis/<slug>/roteiro.json
 ```
 
-Sai `slides/` (1080x1440) e `slides-story/` (1080x1920).
+Sai `slides/` (1080x1440), que é o formato do feed. **Story não se gera por
+padrão** — só quando o Franklin pedir, e aí é `--story` ou `--ambos`.
 Conferir os PNGs — principalmente se alguma frase estourou o slide.
 Se estourou, encurtar a frase no roteiro e rodar de novo. Nunca diminuir a
 fonte no template: o tamanho do tipo é a identidade da série.

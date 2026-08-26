@@ -57,8 +57,18 @@ for (const slug of alvos) {
     continue;
   }
 
+  /* A legenda vive no roteiro; o .txt é só a forma de levá-la pro Drive.
+     Um legenda.txt escrito à mão na pasta do carrossel tem precedência. */
   const legenda = path.join(orig, "legenda.txt");
-  if (existsSync(legenda)) await copyFile(legenda, path.join(dest, "legenda.txt"));
+  if (existsSync(legenda)) {
+    await copyFile(legenda, path.join(dest, "legenda.txt"));
+  } else if (roteiro.legenda) {
+    const tags = (roteiro.hashtags ?? []).join(" ");
+    const partes = [roteiro.legenda];
+    if (tags) partes.push(tags);
+    await writeFile(path.join(dest, "legenda.txt"),
+      partes.join("\n\n") + "\n", "utf8");
+  }
 
   const origens = roteiro.slides
     .map((s, i) => `  ${String(i + 1).padStart(2, "0")}  ${s.tipo.padEnd(14)} ${s.origem ?? "(sem origem)"}`)

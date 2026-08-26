@@ -8,13 +8,46 @@ tipo de coisa esse tema é? A resposta escolhe a sequência.
 
 ---
 
+## A abertura, antes de escolher a sequência
+
+Qualquer que seja o formato, **o carrossel abre com uma pergunta que o leitor
+já se fez** — e os slides seguintes a respondem. Não com uma tese enunciada
+de cara.
+
+A diferença na prática:
+
+| Não | Sim |
+|---|---|
+| "Deus não pode pecar." | "Se Deus pode tudo, ele poderia mentir?" |
+| "Deus é simples." | "Deus é feito de quê?" |
+| "A trindade não é triteísmo." | "Se são três, por que a gente diz um?" |
+
+A tese vira o **fecho**, não a capa. É ela que o leitor ganha por ter chegado
+até o fim, e é por isso que ele desliza.
+
+Critérios para a pergunta da capa:
+
+- **Alguém realmente já se perguntou isso.** Se a pergunta só ocorre a quem
+  já estudou teologia, ela não é gancho — é sumário.
+- **Cabe em uma linha e meia** no display de 104px.
+- **A aula responde.** Pergunta que o material não fecha não entra.
+- **Sem sensacionalismo.** "Você está orando errado" não é pergunta honesta,
+  é isca. O gancho aqui é a curiosidade real, não o susto.
+
+E os slides do meio **explicam**, não enunciam. Cada `frase` deve poder ser
+lida como resposta parcial à pergunta da capa; o `apoio` mostra por quê. Slide
+que só afirma uma proposição vira verbete de dicionário — e foi exatamente
+esse o erro da primeira versão desta série.
+
+---
+
 ## 1. Argumento — 5 a 6 slides
 
 O tema é **um raciocínio que se desenvolve**. Um passo depende do anterior.
 
 | # | tipo | função |
 |---|------|--------|
-| 1 | `capa` | a tensão — o que o leitor pensa que sabe |
+| 1 | `capa` | a pergunta que o leitor já se fez |
 | 2–5 | `ponto` | um movimento por slide, na ordem em que a aula constrói |
 | último | `fecho` | o fechamento que só faz sentido depois dos anteriores |
 
@@ -30,7 +63,7 @@ está no deslocamento.
 
 | # | tipo | função |
 |---|------|--------|
-| 1 | `capa` | o termo, cru, sem explicação |
+| 1 | `capa` | a pergunta que o termo levanta |
 | 2 | `ponto` | o que quase todo mundo entende por ele |
 | 3 | `ponto` | o que ele de fato quer dizer |
 | 4 | `ponto` | a consequência de ter entendido errado |

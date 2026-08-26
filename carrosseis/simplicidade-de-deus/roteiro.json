@@ -3,7 +3,7 @@
   "tema": "Deus é simples — não é feito de partes",
   "slug": "simplicidade-de-deus",
   "assinatura": "@samfiledsoak",
-  "legenda": "Simplicidade é um atributo de Deus. E quase todo mundo entende errado, porque em português simples é o oposto de complexo — e não é disso que a teologia está falando.\n\nSimples aqui é o oposto de composto. Deus não é feito de partes: nem quantitativas, nem metafísicas, nem lógicas. Não existe um pedaço de Deus.\n\nO argumento é curto e fecha sozinho. Todo composto depende necessariamente dos elementos que o constituem. Quem depende de outra coisa para ser o que é, é um ser secundário, derivado. Deus é o ser absolutamente primeiro — logo, não pode ser composto de forma alguma.\n\nE é daí que sai a unicidade, o atributo seguinte: dois seres infinitamente perfeitos seria contradição, porque faltaria alguma perfeição em ambos, e nenhum dos dois seria Deus.",
+  "legenda": "Deus é feito de quê?\n\nA resposta da teologia é: de nada. E isso não é uma esquiva — é um atributo, com nome próprio. Chama-se simplicidade, e quase todo mundo entende errado, porque em português simples é o oposto de complicado. Aqui não. Aqui simples é o oposto de composto.\n\nDeus não é feito de partes: nem quantitativas, nem metafísicas, nem lógicas. Não existe um pedaço de Deus.\n\nE o argumento fecha sozinho. Todo composto depende necessariamente dos elementos que o constituem — tire uma peça e ele deixa de ser o que era. Quem depende de outra coisa para ser o que é, é um ser secundário, derivado. Deus é o ser absolutamente primeiro, logo não pode ser composto de forma alguma.\n\nÉ daí que sai o atributo seguinte, a unicidade: dois seres infinitamente perfeitos seria contradição, porque faltaria alguma perfeição em ambos, e nenhum dos dois seria Deus.",
   "hashtags": [
     "#teologia",
     "#teologiasistematica",
@@ -16,24 +16,32 @@
     {
       "tipo": "capa",
       "sobrancelha": "Teologia sistemática",
-      "titulo": "Deus é **simples**.",
-      "apoio": "E não tem nada a ver com ser fácil de entender.",
+      "titulo": "Deus é feito de **quê**?",
+      "apoio": "A resposta da teologia é: de nada. E isso tem nome.",
       "arte": "assets/01-fundo.png",
       "origem": "base_docs/01 Introdução a Teologia/Aula 06 · linhas 13-15"
     },
     {
       "tipo": "ponto",
-      "sobrancelha": "O que a palavra quer dizer",
-      "frase": "Simples aqui é o contrário de **composto**.",
-      "apoio": "Deus não é feito de partes: nem quantitativas, nem metafísicas, nem lógicas.",
+      "sobrancelha": "O nome",
+      "frase": "Chama-se **simplicidade**. E não quer dizer fácil.",
+      "apoio": "Aqui, simples é o contrário de composto.",
+      "arte": "assets/07-fundo.png",
+      "origem": "base_docs/01 Introdução a Teologia/Aula 06 · linhas 13-15"
+    },
+    {
+      "tipo": "ponto",
+      "sobrancelha": "O que o atributo nega",
+      "frase": "Deus não é feito de **partes**.",
+      "apoio": "Nem quantitativas, nem metafísicas, nem lógicas.",
       "arte": "assets/02-fundo.png",
       "origem": "base_docs/01 Introdução a Teologia/Aula 06 · linhas 13-15"
     },
     {
       "tipo": "ponto",
       "sobrancelha": "Por que isso importa",
-      "frase": "Todo composto supõe **imperfeição**.",
-      "apoio": "O que é feito de partes depende necessariamente das partes que o constituem.",
+      "frase": "Todo composto **depende** das suas partes.",
+      "apoio": "Tire uma peça e ele deixa de ser o que era.",
       "arte": "assets/03-fundo.png",
       "origem": "base_docs/01 Introdução a Teologia/Aula 06 · linhas 13-15"
     },
@@ -56,9 +64,9 @@
     {
       "tipo": "fecho",
       "frase": "Não existe um pedaço de Deus. Só existe Deus.",
+      "convite": "Salve para reler.",
       "arte": "assets/06-fundo.png",
-      "origem": "base_docs/01 Introdução a Teologia/Aula 06 · linhas 13-17",
-      "convite": "Salve para reler."
+      "origem": "base_docs/01 Introdução a Teologia/Aula 06 · linhas 13-17"
     }
   ]
 }

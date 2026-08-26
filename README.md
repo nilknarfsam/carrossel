@@ -47,7 +47,7 @@ Depois de renderizar, `node exportar.mjs <slug>` monta a pasta de entrega em
 Ou renderizar direto, sem passar pelo Claude:
 
 ```bash
-node render.mjs carrosseis/<slug>/roteiro.json --ambos
+node render.mjs carrosseis/<slug>/roteiro.json
 ```
 
 ## Teste rápido

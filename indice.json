@@ -251,7 +251,7 @@
           "resumo": "Há uma onipotência física — poder criar e sustentar — e uma moral: Deus é tão poderoso que não pode praticar o mal nem ser tentado.",
           "linhas": "17-19",
           "densidade": "alta",
-          "usado": false
+          "usado": true
         },
         {
           "titulo": "Deus é simples — não é feito de partes",
@@ -259,7 +259,7 @@
           "resumo": "Simplicidade aqui não é o oposto de complexo. É não ser composto: todo composto depende das partes, e quem depende é ser secundário.",
           "linhas": "13-15",
           "densidade": "alta",
-          "usado": false
+          "usado": true
         },
         {
           "titulo": "Espírito, mas espírito pessoal",
