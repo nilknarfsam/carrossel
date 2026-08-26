@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght,SOFT,WONK@9..144,300..800,0..100,0..1&family=IBM+Plex+Sans:wght@300;400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --ultramar:      #16256B;
+    --ultramar-esc:  #0B1238;
+    --osso:          #EFE9DB;
+    --osso-fosco:    #B8B2A4;
+    --ouro:          #C8A22B;
+
+    --feed-w: 1080px;  --feed-h: 1440px;
+    --story-w: 1080px; --story-h: 1920px;
+
+    --pad: 96px;
+    --rail: 72px;
+  }
+
+  *{ margin:0; padding:0; box-sizing:border-box; }
+  body{ background:#3a3a3a; display:flex; flex-direction:column; align-items:center; gap:40px; padding:40px 0; }
+
+  .slide{
+    position:relative;
+    width:var(--feed-w); height:var(--feed-h);
+    background:var(--ultramar);
+    overflow:hidden;
+    color:var(--osso);
+    font-family:'IBM Plex Sans',system-ui,sans-serif;
+    display:grid;
+    grid-template-columns:var(--rail) 1fr;
+  }
+  .slide[data-formato="story"]{ width:var(--story-w); height:var(--story-h); }
+
+  /* ---- arte de fundo (gerada pelo gpt-image-2) ---- */
+  .arte{
+    position:absolute; inset:0;
+    background-size:cover; background-position:center;
+    opacity:.30;
+    filter:saturate(.35) contrast(1.05);
+  }
+  .veu{
+    position:absolute; inset:0;
+    background:
+      linear-gradient(to bottom,
+        rgba(11,18,56,.55) 0%,
+        rgba(11,18,56,.20) 38%,
+        rgba(11,18,56,.88) 78%,
+        rgba(11,18,56,.97) 100%);
+  }
+
+  /* ---- assinatura: a trilha de proveniência ---- */
+  .trilha{
+    position:relative; z-index:2;
+    border-right:1px solid rgba(239,233,219,.18);
+    display:flex; align-items:flex-end; justify-content:center;
+    padding-bottom:var(--pad);
+  }
+  .trilha .ref{
+    writing-mode:vertical-rl; transform:rotate(180deg);
+    font-family:'IBM Plex Mono',monospace;
+    font-size:17px; letter-spacing:.16em; text-transform:uppercase;
+    color:var(--osso-fosco);
+    white-space:nowrap;
+  }
+  .marca{
+    position:absolute; left:-1px; width:3px;
+    background:var(--ouro);
+    transition:none;
+  }
+
+  /* ---- conteúdo ---- */
+  .corpo{
+    position:relative; z-index:2;
+    padding:var(--pad) var(--pad) var(--pad) 56px;
+    display:flex; flex-direction:column; justify-content:flex-end;
+    gap:36px;
+  }
+  .slide[data-tipo="capa"] .corpo{ justify-content:center; }
+
+  .sobrancelha{
+    font-family:'IBM Plex Mono',monospace;
+    font-size:19px; letter-spacing:.22em; text-transform:uppercase;
+    color:var(--ouro);
+  }
+
+  .titulo{
+    font-family:'Fraunces',Georgia,serif;
+    font-variation-settings:'opsz' 144,'SOFT' 20,'WONK' 1;
+    font-weight:600;
+    font-size:104px; line-height:.98; letter-spacing:-.02em;
+    text-wrap:balance;
+  }
+  .slide[data-formato="story"] .titulo{ font-size:112px; }
+
+  .frase{
+    font-family:'Fraunces',Georgia,serif;
+    font-variation-settings:'opsz' 96,'SOFT' 24,'WONK' 1;
+    font-weight:500;
+    font-size:70px; line-height:1.1; letter-spacing:-.015em;
+    text-wrap:pretty;
+  }
+
+  .frase em, .titulo em{
+    font-style:normal;
+    background:linear-gradient(to top,rgba(200,162,43,.85) 0 10px,transparent 10px);
+    padding-bottom:2px;
+  }
+
+  .apoio{
+    font-size:34px; line-height:1.5; font-weight:300;
+    color:rgba(239,233,219,.86);
+    max-width:22ch;
+    text-wrap:pretty;
+  }
+
+  /* texto bíblico */
+  .slide[data-tipo="texto-biblico"] .frase{
+    font-variation-settings:'opsz' 96,'SOFT' 40,'WONK' 0;
+    font-style:italic; font-weight:400; font-size:64px;
+  }
+  .fonte{
+    font-family:'IBM Plex Mono',monospace;
+    font-size:24px; letter-spacing:.1em; color:var(--ouro);
+  }
+
+  /* fecho */
+  .credito{
+    border-top:1px solid rgba(239,233,219,.18);
+    padding-top:28px;
+    font-size:24px; line-height:1.45; font-weight:300;
+    color:var(--osso-fosco);
+  }
+  .credito strong{ color:var(--osso); font-weight:500; }
+
+  .marcador{
+    position:absolute; right:var(--pad); top:var(--pad); z-index:3;
+    font-family:'IBM Plex Mono',monospace;
+    font-size:20px; letter-spacing:.12em; color:var(--osso-fosco);
+  }
+</style>
+</head>
+<body>
+<script>
+/* ROTEIRO é injetado pelo render.mjs como window.ROTEIRO */
+const R = window.ROTEIRO || { serie:"", modulo:"", formato:"feed", slides:[] };
+
+const esc = s => String(s ?? "").replace(/[&<>]/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;'}[c]));
+/* **destaque** vira sublinhado dourado */
+const mk  = s => esc(s).replace(/\*\*(.+?)\*\*/g, "<em>$1</em>");
+
+const total = R.slides.length;
+
+document.body.innerHTML = R.slides.map((s, i) => {
+  const passo   = 100 / total;
+  const topo    = (passo * i).toFixed(3);
+  const arte    = s.arte ? `<div class="arte" style="background-image:url('${s.arte}')"></div>` : "";
+  const ref     = esc(R.modulo || R.serie);
+
+  let bloco = "";
+  if (s.tipo === "capa") {
+    bloco = `
+      ${s.sobrancelha ? `<div class="sobrancelha">${esc(s.sobrancelha)}</div>` : ""}
+      <h1 class="titulo">${mk(s.titulo)}</h1>
+      ${s.apoio ? `<p class="apoio">${esc(s.apoio)}</p>` : ""}`;
+  } else if (s.tipo === "texto-biblico") {
+    bloco = `
+      <p class="frase">${mk(s.frase)}</p>
+      ${s.fonte ? `<div class="fonte">${esc(s.fonte)}</div>` : ""}`;
+  } else if (s.tipo === "fecho") {
+    bloco = `
+      <p class="frase">${mk(s.frase)}</p>
+      ${s.credito ? `<div class="credito">${s.credito}</div>` : ""}`;
+  } else {
+    bloco = `
+      ${s.sobrancelha ? `<div class="sobrancelha">${esc(s.sobrancelha)}</div>` : ""}
+      <p class="frase">${mk(s.frase)}</p>
+      ${s.apoio ? `<p class="apoio">${esc(s.apoio)}</p>` : ""}`;
+  }
+
+  return `
+  <section class="slide" data-tipo="${esc(s.tipo)}" data-formato="${esc(R.formato)}" data-i="${i}">
+    ${arte}
+    <div class="veu"></div>
+    <div class="trilha">
+      <div class="marca" style="top:${topo}%;height:${passo.toFixed(3)}%"></div>
+      <div class="ref">${ref}</div>
+    </div>
+    <div class="marcador">${String(i+1).padStart(2,"0")} / ${String(total).padStart(2,"0")}</div>
+    <div class="corpo">${bloco}</div>
+  </section>`;
+}).join("");
+</script>
+</body>
+</html>

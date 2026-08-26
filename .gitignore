@@ -1,0 +1,15 @@
+node_modules/
+
+# artes geradas e PNGs renderizados — reprodutíveis a partir do roteiro
+carrosseis/*/assets/
+carrosseis/*/slides/
+carrosseis/*/slides-story/
+
+# pasta de entrega (vai pro Google Drive, não pro git)
+saida/
+
+# ebooks de apoio (pesados, não são código)
+*.pdf
+
+# resíduo da extração do kit
+mnt/

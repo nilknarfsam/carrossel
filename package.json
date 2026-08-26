@@ -1,0 +1,11 @@
+{
+  "name": "carrossel",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "render": "node render.mjs"
+  },
+  "dependencies": {
+    "playwright": "^1.49.0"
+  }
+}
