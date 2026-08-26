@@ -41,6 +41,12 @@ válido, serve pra validar tipografia antes de gerar imagem.
   `@samfiledsoak`). O `credito` do fecho fica vazio salvo pedido explícito.
 - A arte de cada slide é dirigida, não decorativa: ver
   `.claude/skills/carrossel/arte.md`.
+- **Texto nunca é gerado por imagem.** Testado: o modelo inventa acento
+  ("PODERIA" virou "PODERIÁ") e não há conserto. Texto no template, imagem só
+  na foto.
+- Quatro layouts (`trilha`, `editorial`, `bloco`, `lista`), campo `layout` no
+  roteiro, especificados em `.claude/skills/carrossel/layouts/`.
+- Feed é **1080x1350** (4:5) — o formato dos templates de referência.
 - Nome próprio, data, termo técnico e referência bíblica se conferem no **ebook
   em PDF** do curso antes de virar slide — a transcrição é ASR e erra grafia.
 

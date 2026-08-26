@@ -39,6 +39,34 @@ do formato do argumento, não do gosto do dia — as seis estão em
 O `fecho` pode levar um campo `convite` — uma linha pedindo **uma** coisa.
 A seta `→` de avanço é automática e some no último slide.
 
+### Escolher o layout
+
+Campo `layout` no roteiro, um por carrossel. Cada um tem uma especificação
+completa em `layouts/` — grade, escala tipográfica, o que a foto precisa ser e
+o que não fazer. **Ler a do layout escolhido antes de escrever o roteiro**, porque
+elas mudam o que cabe em cada campo.
+
+| `layout` | Cara | Quando | Espec |
+|---|---|---|---|
+| `trilha` | ultramarino, foto ao fundo velada | o padrão da série | — |
+| `editorial` | creme, serifada em caixa alta, painel de foto | frase curta, apoio longo | [editorial.md](layouts/editorial.md) |
+| `bloco` | cartão ultramarino, grotesca, peso misto | comparação, peso institucional | [bloco.md](layouts/bloco.md) |
+| `lista` | osso, elipse ultramarina, carimbo dourado | a sequência Lista, 6 a 8 páginas | [lista.md](layouts/lista.md) |
+
+Omitir o campo mantém `trilha`.
+
+Os três novos vieram dos templates em `modelos/` — a estrutura é de lá, a
+paleta e as fontes são nossas. `modelos/` fica fora do git.
+
+### Um aviso sobre gerar o post inteiro por imagem
+
+Já foi testado e **não presta para esta série**: o modelo de imagem desenha
+uma composição excelente e inventa acento. No teste, "PODERIA" saiu "PODERIÁ".
+O erro é aleatório, não tem conserto (regenerar traz outro layout e outro erro)
+e num carrossel de ensino ele destrói a autoridade do conteúdo.
+
+A divisão que funciona: **texto sempre no template, imagem só na foto.**
+
 Regras de escrita:
 
 - **Um movimento por slide.** Se o slide tem duas ideias, são dois slides.

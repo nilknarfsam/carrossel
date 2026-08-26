@@ -16,3 +16,7 @@ mnt/
 
 # referencias de terceiros (material licenciado, repo publico)
 referencias/
+
+# templates de terceiro e provas de layout
+modelos/
+carrosseis/prova-*/

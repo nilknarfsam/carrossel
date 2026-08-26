@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght,SOFT,WONK@9..144,300..800,0..100,0..1&family=IBM+Plex+Sans:wght@300;400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght,SOFT,WONK@0,9..144,300..800,0..100,0..1;1,9..144,300..800,0..100,0..1&family=IBM+Plex+Sans:wght@300;400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
 <style>
   :root{
     --ultramar:      #16256B;
@@ -13,10 +13,10 @@
     --osso-fosco:    #B8B2A4;
     --ouro:          #C8A22B;
 
-    --feed-w: 1080px;  --feed-h: 1440px;
+    --feed-w: 1080px;  --feed-h: 1350px;
     --story-w: 1080px; --story-h: 1920px;
 
-    --pad: 96px;
+    --pad: 88px;
     --rail: 72px;
   }
 
@@ -26,16 +26,21 @@
   .slide{
     position:relative;
     width:var(--feed-w); height:var(--feed-h);
-    background:var(--ultramar);
     overflow:hidden;
+    background:var(--ultramar);
     color:var(--osso);
     font-family:'IBM Plex Sans',system-ui,sans-serif;
-    display:grid;
-    grid-template-columns:var(--rail) 1fr;
   }
   .slide[data-formato="story"]{ width:var(--story-w); height:var(--story-h); }
 
-  /* ---- arte de fundo (gerada pelo gpt-image-2) ---- */
+  /* ================================================================
+     LAYOUT: trilha — o original da série
+     ================================================================ */
+  .slide[data-layout="trilha"]{
+    display:grid;
+    grid-template-columns:var(--rail) 1fr;
+  }
+
   .arte{
     position:absolute; inset:0;
     background-size:cover; background-position:center;
@@ -52,7 +57,7 @@
         rgba(11,18,56,.97) 100%);
   }
 
-  /* ---- assinatura: a trilha de proveniência ---- */
+  /* a trilha de proveniência */
   .trilha{
     position:relative; z-index:2;
     border-right:1px solid rgba(239,233,219,.18);
@@ -69,15 +74,13 @@
   .marca{
     position:absolute; left:-1px; width:3px;
     background:var(--ouro);
-    transition:none;
   }
 
-  /* ---- conteúdo ---- */
   .corpo{
     position:relative; z-index:2;
     padding:var(--pad) var(--pad) calc(var(--pad) + 78px) 56px;
     display:flex; flex-direction:column; justify-content:flex-end;
-    gap:36px;
+    gap:32px;
   }
   .slide[data-tipo="capa"] .corpo{ justify-content:center; }
 
@@ -91,43 +94,37 @@
     font-family:'Fraunces',Georgia,serif;
     font-variation-settings:'opsz' 144,'SOFT' 20,'WONK' 1;
     font-weight:600;
-    font-size:104px; line-height:.98; letter-spacing:-.02em;
+    font-size:96px; line-height:.98; letter-spacing:-.02em;
     text-wrap:balance;
   }
-  .slide[data-formato="story"] .titulo{ font-size:112px; }
-
   .frase{
     font-family:'Fraunces',Georgia,serif;
     font-variation-settings:'opsz' 96,'SOFT' 24,'WONK' 1;
     font-weight:500;
-    font-size:70px; line-height:1.1; letter-spacing:-.015em;
+    font-size:64px; line-height:1.1; letter-spacing:-.015em;
     text-wrap:pretty;
   }
-
   .frase em, .titulo em{
     font-style:normal;
     background:linear-gradient(to top,rgba(200,162,43,.85) 0 10px,transparent 10px);
     padding-bottom:2px;
   }
-
   .apoio{
-    font-size:34px; line-height:1.5; font-weight:300;
+    font-size:32px; line-height:1.5; font-weight:300;
     color:rgba(239,233,219,.86);
     max-width:22ch;
     text-wrap:pretty;
   }
 
-  /* texto bíblico */
   .slide[data-tipo="texto-biblico"] .frase{
     font-variation-settings:'opsz' 96,'SOFT' 40,'WONK' 0;
-    font-style:italic; font-weight:400; font-size:64px;
+    font-style:italic; font-weight:400; font-size:60px;
   }
   .fonte{
     font-family:'IBM Plex Mono',monospace;
     font-size:24px; letter-spacing:.1em; color:var(--ouro);
   }
 
-  /* fecho */
   .credito{
     border-top:1px solid rgba(239,233,219,.18);
     padding-top:28px;
@@ -135,31 +132,218 @@
     color:var(--osso-fosco);
   }
   .credito strong{ color:var(--osso); font-weight:500; }
-
-  /* assinatura de quem publica — mesmo peso do marcador, canto oposto */
-  .assinatura{
-    position:absolute; left:calc(var(--rail) + 56px); bottom:var(--pad); z-index:3;
-    font-family:'IBM Plex Mono',monospace;
-    font-size:20px; letter-spacing:.12em; color:var(--osso-fosco);
-  }
-
-  /* seta de avanço — some no último slide, que não tem para onde mandar */
-  .avanco{
-    position:absolute; right:var(--pad); bottom:var(--pad); z-index:3;
-    font-family:'IBM Plex Mono',monospace;
-    font-size:26px; line-height:1; color:var(--osso-fosco);
-  }
-
-  /* convite do fecho — uma linha, acima da assinatura */
   .convite{
     font-family:'IBM Plex Mono',monospace;
     font-size:22px; letter-spacing:.06em; color:var(--osso);
   }
 
-  .marcador{
-    position:absolute; right:var(--pad); top:var(--pad); z-index:3;
+  /* rodapé comum a todos os layouts */
+  .assinatura, .marcador, .avanco{
+    position:absolute; z-index:3;
     font-family:'IBM Plex Mono',monospace;
-    font-size:20px; letter-spacing:.12em; color:var(--osso-fosco);
+    letter-spacing:.12em; color:var(--osso-fosco);
+  }
+  .assinatura{ left:calc(var(--rail) + 56px); bottom:var(--pad); font-size:20px; }
+  .marcador { right:var(--pad); top:var(--pad); font-size:20px; }
+  .avanco   { right:var(--pad); bottom:var(--pad); font-size:26px; line-height:1; }
+
+  /* ================================================================
+     LAYOUT: editorial — do modelo01. Creme, serifada, painel de foto.
+     Sem ouro: o destaque é peso.
+     ================================================================ */
+  .slide[data-layout="editorial"]{
+    background:var(--osso);
+    color:var(--ultramar-esc);
+    padding:84px 88px;
+  }
+  .slide[data-layout="editorial"] .rotulo{
+    font-family:'IBM Plex Mono',monospace;
+    font-size:20px; letter-spacing:.22em; text-transform:uppercase;
+  }
+  .slide[data-layout="editorial"] .regua{
+    position:absolute; left:0; top:132px;
+    width:34%; height:1px; background:var(--ultramar-esc);
+  }
+  .slide[data-layout="editorial"] .painel{
+    position:absolute; top:20%; height:52%; width:38%;
+    background-size:cover; background-position:center;
+  }
+  .slide[data-layout="editorial"][data-foto="direita"] .painel{
+    right:0; border-radius:44px 0 0 44px;
+  }
+  .slide[data-layout="editorial"][data-foto="esquerda"] .painel{
+    left:0; border-radius:0 44px 44px 0;
+  }
+  .slide[data-layout="editorial"] .col{
+    position:absolute; top:200px; bottom:200px;
+    display:flex; flex-direction:column; justify-content:center; gap:26px;
+  }
+  .slide[data-layout="editorial"][data-foto="direita"] .col{ left:88px; width:52%; }
+  .slide[data-layout="editorial"][data-foto="esquerda"] .col{ right:88px; width:50%; }
+  .slide[data-layout="editorial"][data-foto="nenhuma"] .col{ left:88px; right:88px; width:auto; }
+
+  .slide[data-layout="editorial"] .script{
+    font-family:'Fraunces',Georgia,serif;
+    font-variation-settings:'opsz' 144,'SOFT' 100,'WONK' 1;
+    font-style:italic; font-weight:300;
+    font-size:68px; line-height:1;
+  }
+  .slide[data-layout="editorial"] .titulo,
+  .slide[data-layout="editorial"] .frase{
+    font-family:'Fraunces',Georgia,serif;
+    font-variation-settings:'opsz' 144,'SOFT' 12,'WONK' 1;
+    font-weight:600; text-transform:uppercase;
+    letter-spacing:-.01em;
+  }
+  .slide[data-layout="editorial"] .titulo{ font-size:96px; line-height:.94; }
+  .slide[data-layout="editorial"] .frase { font-size:68px; line-height:.98; }
+  .slide[data-layout="editorial"] .titulo em,
+  .slide[data-layout="editorial"] .frase em{
+    font-style:normal; font-weight:800; background:none; padding:0;
+  }
+  .slide[data-layout="editorial"] .apoio{
+    font-size:32px; line-height:1.5; font-weight:400;
+    color:var(--ultramar-esc); max-width:26ch;
+  }
+  .slide[data-layout="editorial"] .capsula{
+    position:absolute; right:88px; bottom:84px;
+    height:76px; padding:0 42px; border-radius:38px;
+    border:1.5px solid var(--ultramar-esc);
+    display:flex; align-items:center; gap:20px;
+    font-family:'IBM Plex Mono',monospace;
+    font-size:22px; letter-spacing:.16em; text-transform:uppercase;
+  }
+  .slide[data-layout="editorial"] .assinatura{
+    left:88px; bottom:104px; color:var(--ultramar-esc);
+  }
+
+  /* ================================================================
+     LAYOUT: bloco — do modelo05. Cartão ultramarino, grotesca,
+     hierarquia por peso dentro da frase.
+     ================================================================ */
+  .slide[data-layout="bloco"]{
+    background:var(--osso);
+    color:var(--osso);
+  }
+  .slide[data-layout="bloco"] .cartao{
+    position:absolute; left:52px; top:40px; right:-56px; bottom:-56px;
+    background:var(--ultramar); border-radius:56px;
+  }
+  .slide[data-layout="bloco"] .faixa{
+    position:absolute; left:0; top:0; bottom:0; width:56px;
+    background:var(--ultramar);
+  }
+  .slide[data-layout="bloco"] .objeto{
+    position:absolute; right:-40px; top:14%; width:34%; height:58%;
+    background-size:cover; background-position:center;
+    border-radius:40px;
+    box-shadow:0 40px 80px rgba(11,18,56,.35);
+    z-index:2;
+  }
+  .slide[data-layout="bloco"] .col{
+    position:absolute; z-index:3;
+    left:164px; right:420px; top:0; bottom:0;
+    display:flex; flex-direction:column; justify-content:center; gap:0;
+  }
+  .slide[data-layout="bloco"][data-tipo="capa"] .col{ left:120px; right:420px; }
+
+  .slide[data-layout="bloco"] .rotulo{
+    font-family:'IBM Plex Mono',monospace;
+    font-size:22px; letter-spacing:.2em; text-transform:uppercase;
+    margin-bottom:40px;
+  }
+  .slide[data-layout="bloco"] .titulo,
+  .slide[data-layout="bloco"] .frase{
+    font-family:'IBM Plex Sans',sans-serif;
+    font-weight:300; letter-spacing:-.02em; text-transform:none;
+  }
+  .slide[data-layout="bloco"] .titulo{ font-size:84px; line-height:1.05; }
+  .slide[data-layout="bloco"] .frase { font-size:60px; line-height:1.12; }
+  .slide[data-layout="bloco"] .frase em{
+    font-style:normal; font-weight:600; background:none; padding:0;
+  }
+  .slide[data-layout="bloco"] .regua{
+    width:25%; height:1.5px; background:currentColor; opacity:.6;
+    margin:48px 0;
+  }
+  .slide[data-layout="bloco"] .apoio{
+    font-size:30px; line-height:1.4; font-weight:600;
+    color:inherit; max-width:26ch;
+  }
+  /* na capa o texto é escuro sobre o osso, e o ouro entra uma vez */
+  .slide[data-layout="bloco"][data-tipo="capa"]{ color:var(--ultramar-esc); }
+  .slide[data-layout="bloco"][data-tipo="capa"] .titulo em{ color:var(--ouro); font-weight:600; }
+  .slide[data-layout="bloco"][data-tipo="capa"] .apoio{ font-weight:400; }
+  .slide[data-layout="bloco"] .assinatura{ left:164px; bottom:84px; color:inherit; opacity:.75; }
+  .slide[data-layout="bloco"][data-tipo="capa"] .assinatura{ left:120px; }
+
+  /* ================================================================
+     LAYOUT: lista — do modelo09. Forma orgânica, carimbo dourado,
+     contador obrigatório, corpo longo.
+     ================================================================ */
+  .slide[data-layout="lista"]{
+    background:var(--osso);
+    color:var(--ultramar-esc);
+    padding:72px 92px;
+  }
+  .slide[data-layout="lista"] .forma{
+    position:absolute; top:50%; right:0;
+    width:62%; height:148%;
+    transform:translate(46%,-50%);
+    border-radius:50%;
+    background:var(--ultramar);
+  }
+  .slide[data-layout="lista"] .rotulo{
+    position:absolute; left:92px; top:72px;
+    font-size:24px; font-weight:400;
+  }
+  .slide[data-layout="lista"] .contador{
+    position:absolute; right:92px; top:72px; z-index:3;
+    font-family:'IBM Plex Mono',monospace;
+    font-size:24px; font-weight:500; color:var(--osso);
+  }
+  .slide[data-layout="lista"] .col{
+    position:absolute; left:92px; top:0; bottom:0;
+    width:58%;
+    display:flex; flex-direction:column; justify-content:center; gap:34px;
+  }
+  .slide[data-layout="lista"] .pilula{
+    align-self:flex-start;
+    background:var(--ouro); color:var(--ultramar-esc);
+    padding:12px 34px; border-radius:999px;
+    font-family:'IBM Plex Mono',monospace;
+    font-size:30px; font-weight:500; letter-spacing:.12em; text-transform:uppercase;
+  }
+  .slide[data-layout="lista"] .titulo,
+  .slide[data-layout="lista"] .frase{
+    font-family:'Fraunces',Georgia,serif;
+    font-variation-settings:'opsz' 144,'SOFT' 8,'WONK' 1;
+    font-weight:700; text-transform:uppercase; letter-spacing:-.03em;
+    position:relative; isolation:isolate;
+  }
+  .slide[data-layout="lista"] .titulo{ font-size:92px; line-height:.96; }
+  .slide[data-layout="lista"] .frase { font-size:62px; line-height:1; }
+  .slide[data-layout="lista"] .titulo em,
+  .slide[data-layout="lista"] .frase em{
+    font-style:normal; background:none; padding:0;
+    position:relative;
+  }
+  .slide[data-layout="lista"] .frase em::before{
+    content:""; position:absolute; z-index:-1;
+    width:132px; height:132px; border-radius:50%;
+    background:var(--ouro);
+    left:-24px; top:50%; transform:translateY(-58%);
+  }
+  .slide[data-layout="lista"] .apoio{
+    font-size:30px; line-height:1.5; font-weight:400;
+    color:rgba(11,18,56,.80); max-width:100%;
+  }
+  .slide[data-layout="lista"] .seta{
+    position:absolute; right:9%; top:50%; transform:translateY(-50%);
+    z-index:3; color:var(--osso); font-size:56px; line-height:1;
+  }
+  .slide[data-layout="lista"] .assinatura{
+    left:92px; bottom:92px; color:var(--ultramar-esc); opacity:.7;
   }
 </style>
 </head>
@@ -169,53 +353,148 @@
 const R = window.ROTEIRO || { serie:"", modulo:"", formato:"feed", slides:[] };
 
 const esc = s => String(s ?? "").replace(/[&<>]/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;'}[c]));
-/* **destaque** vira sublinhado dourado */
+/* **destaque** — o tratamento muda por layout, a marcação é a mesma */
 const mk  = s => esc(s).replace(/\*\*(.+?)\*\*/g, "<em>$1</em>");
 
-const total = R.slides.length;
+const total      = R.slides.length;
+const layout     = R.layout ?? "trilha";
 const assinatura = R.assinatura ?? "";
+const serie      = esc(R.serie || R.modulo || "");
 
-document.body.innerHTML = R.slides.map((s, i) => {
-  const passo   = 100 / total;
-  const topo    = (passo * i).toFixed(3);
-  const arte    = s.arte ? `<div class="arte" style="background-image:url('${s.arte}')"></div>` : "";
-  const ref     = esc(R.serie || R.modulo);
+const nn = n => String(n).padStart(2, "0");
+
+/* ---------------------------------------------------------------- trilha */
+function trilha(s, i){
+  const passo = 100 / total;
+  const topo  = (passo * i).toFixed(3);
+  const arte  = s.arte ? `<div class="arte" style="background-image:url('${s.arte}')"></div>` : "";
 
   let bloco = "";
   if (s.tipo === "capa") {
-    bloco = `
-      ${s.sobrancelha ? `<div class="sobrancelha">${esc(s.sobrancelha)}</div>` : ""}
+    bloco = `${s.sobrancelha ? `<div class="sobrancelha">${esc(s.sobrancelha)}</div>` : ""}
       <h1 class="titulo">${mk(s.titulo)}</h1>
       ${s.apoio ? `<p class="apoio">${esc(s.apoio)}</p>` : ""}`;
   } else if (s.tipo === "texto-biblico") {
-    bloco = `
-      <p class="frase">${mk(s.frase)}</p>
+    bloco = `<p class="frase">${mk(s.frase)}</p>
       ${s.fonte ? `<div class="fonte">${esc(s.fonte)}</div>` : ""}`;
   } else if (s.tipo === "fecho") {
-    bloco = `
-      <p class="frase">${mk(s.frase)}</p>
+    bloco = `<p class="frase">${mk(s.frase)}</p>
       ${s.convite ? `<div class="convite">${esc(s.convite)}</div>` : ""}
       ${s.credito ? `<div class="credito">${s.credito}</div>` : ""}`;
   } else {
-    bloco = `
-      ${s.sobrancelha ? `<div class="sobrancelha">${esc(s.sobrancelha)}</div>` : ""}
+    bloco = `${s.sobrancelha ? `<div class="sobrancelha">${esc(s.sobrancelha)}</div>` : ""}
       <p class="frase">${mk(s.frase)}</p>
       ${s.apoio ? `<p class="apoio">${esc(s.apoio)}</p>` : ""}`;
   }
 
-  return `
-  <section class="slide" data-tipo="${esc(s.tipo)}" data-formato="${esc(R.formato)}" data-i="${i}">
-    ${arte}
+  return `${arte}
     <div class="veu"></div>
     <div class="trilha">
       <div class="marca" style="top:${topo}%;height:${passo.toFixed(3)}%"></div>
-      <div class="ref">${ref}</div>
+      <div class="ref">${serie}</div>
     </div>
-    <div class="marcador">${String(i+1).padStart(2,"0")} / ${String(total).padStart(2,"0")}</div>
+    <div class="marcador">${nn(i+1)} / ${nn(total)}</div>
     ${assinatura ? `<div class="assinatura">${esc(assinatura)}</div>` : ""}
     ${i < total - 1 ? `<div class="avanco">&rarr;</div>` : ""}
-    <div class="corpo">${bloco}</div>
-  </section>`;
+    <div class="corpo">${bloco}</div>`;
+}
+
+/* ------------------------------------------------------------- editorial */
+function editorial(s, i){
+  const ultimo = i === total - 1;
+  const foto   = !s.arte ? "nenhuma" : (s.tipo === "capa" ? "direita" : "esquerda");
+  const painel = s.arte ? `<div class="painel" style="background-image:url('${s.arte}')"></div>` : "";
+
+  let bloco = "";
+  if (s.tipo === "capa") {
+    bloco = `${s.sobrancelha ? `<div class="script">${esc(s.sobrancelha)}</div>` : ""}
+      <h1 class="titulo">${mk(s.titulo)}</h1>
+      ${s.apoio ? `<p class="apoio">${esc(s.apoio)}</p>` : ""}`;
+  } else if (s.tipo === "fecho") {
+    bloco = `<p class="frase">${mk(s.frase)}</p>
+      ${s.convite ? `<p class="apoio">${esc(s.convite)}</p>` : ""}`;
+  } else {
+    bloco = `<div class="script">${nn(i)}.</div>
+      <p class="frase">${mk(s.frase)}</p>
+      ${s.apoio ? `<p class="apoio">${esc(s.apoio)}</p>` : ""}`;
+  }
+
+  const capsula = s.tipo === "capa" ? `SWIPE <span>&mdash;&rarr;</span>`
+                : ultimo            ? esc(assinatura)
+                :                     `${nn(i+2)} <span>&mdash;&rarr;</span>`;
+
+  return `${painel}
+    <div class="rotulo">${serie}</div>
+    <div class="regua"></div>
+    <div class="col">${bloco}</div>
+    <div class="capsula">${capsula}</div>
+    ${assinatura && !ultimo ? `<div class="assinatura">${esc(assinatura)}</div>` : ""}`;
+}
+
+/* ----------------------------------------------------------------- bloco */
+function bloco_(s, i){
+  const capa   = s.tipo === "capa";
+  const fundo  = capa ? `<div class="faixa"></div>` : `<div class="cartao"></div>`;
+  const objeto = s.arte ? `<div class="objeto" style="background-image:url('${s.arte}')"></div>` : "";
+
+  let corpo = "";
+  if (capa) {
+    corpo = `${s.sobrancelha ? `<div class="rotulo">${esc(s.sobrancelha)}</div>` : ""}
+      <h1 class="titulo">${mk(s.titulo)}</h1>
+      ${s.apoio ? `<div class="regua"></div><p class="apoio">${esc(s.apoio)}</p>` : ""}`;
+  } else if (s.tipo === "fecho") {
+    corpo = `<p class="frase">${mk(s.frase)}</p>
+      ${s.convite ? `<div class="regua"></div><p class="apoio">${esc(s.convite)}</p>` : ""}`;
+  } else {
+    corpo = `${s.sobrancelha ? `<div class="rotulo">${esc(s.sobrancelha)}</div>` : ""}
+      <p class="frase">${mk(s.frase)}</p>
+      ${s.apoio ? `<div class="regua"></div><p class="apoio">${esc(s.apoio)}</p>` : ""}`;
+  }
+
+  return `${fundo}${objeto}
+    <div class="col">${corpo}</div>
+    <div class="marcador" style="color:${capa ? "var(--ultramar-esc)" : "var(--osso)"}">${nn(i+1)} / ${nn(total)}</div>
+    ${assinatura ? `<div class="assinatura">${esc(assinatura)}</div>` : ""}
+    ${i < total - 1 ? `<div class="avanco" style="color:${capa ? "var(--ultramar-esc)" : "var(--osso)"}">&rarr;</div>` : ""}`;
+}
+
+/* ----------------------------------------------------------------- lista */
+function lista(s, i){
+  let corpo = "";
+  if (s.tipo === "capa") {
+    corpo = `${s.sobrancelha ? `<div class="pilula">${esc(s.sobrancelha)}</div>` : ""}
+      <h1 class="titulo">${mk(s.titulo)}</h1>
+      ${s.apoio ? `<p class="apoio">${esc(s.apoio)}</p>` : ""}`;
+  } else if (s.tipo === "fecho") {
+    corpo = `<p class="frase">${mk(s.frase)}</p>
+      ${s.convite ? `<p class="apoio">${esc(s.convite)}</p>` : ""}`;
+  } else {
+    corpo = `<p class="frase">${mk(s.frase)}</p>
+      ${s.apoio ? `<p class="apoio">${esc(s.apoio)}</p>` : ""}`;
+  }
+
+  return `<div class="forma"></div>
+    <div class="rotulo">${serie}</div>
+    <div class="contador">${i+1}/${total}</div>
+    <div class="col">${corpo}</div>
+    ${i < total - 1 ? `<div class="seta">&rarr;</div>` : ""}
+    ${assinatura ? `<div class="assinatura">${esc(assinatura)}</div>` : ""}`;
+}
+
+const LAYOUTS = { trilha, editorial, bloco: bloco_, lista };
+
+document.body.innerHTML = R.slides.map((s, i) => {
+  const montar = LAYOUTS[layout] ?? trilha;
+  const foto   = layout === "editorial"
+    ? (!s.arte ? "nenhuma" : (s.tipo === "capa" ? "direita" : "esquerda"))
+    : "";
+  return `
+  <section class="slide"
+           data-layout="${esc(layout)}"
+           data-tipo="${esc(s.tipo)}"
+           data-formato="${esc(R.formato)}"
+           data-foto="${foto}"
+           data-i="${i}">${montar(s, i)}</section>`;
 }).join("");
 </script>
 </body>
