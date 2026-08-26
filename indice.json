@@ -1,0 +1,339 @@
+{
+  "atualizado": "2026-08-26",
+  "observacoes": [
+    "As transcricoes sao ASR e trazem erros pesados em nomes proprios e citacoes (ex.: 'ao gusto estronde' = Augustus Strong, 'Inisseia' = Niceia, 'Guilherme de Angkor' = Guilherme de Ockham, 'protonte 1' = pros ton theon). Todo nome, data ou citacao que for para um slide precisa ser conferido no ebook antes de publicar: o argumento da aula e confiavel, a grafia nao.",
+    "Na aula 07 o professor especula sobre quem cunhou o termo trindade e diz explicitamente que nao tem certeza. Nao afirmar autoria em slide.",
+    "A aula 06 tem duas copias byte a byte identicas no diretorio (o arquivo _2). Indexada uma vez so.",
+    "'Basico Em Teologia - Video - Renascer' e a apresentacao institucional do curso, sem conteudo de aula. Fora do indice."
+  ],
+  "aulas": [
+    {
+      "arquivo": "base_docs/01 Introdução a Teologia/Aula 01 - Introdução à Teologia - Curso Básico - 1920x1080 4011K.md",
+      "curso": "Introdução à Teologia · Curso Básico — Renascer Instituto Teológico",
+      "modulo": "Aula 01",
+      "professor": "",
+      "temas": [
+        {
+          "titulo": "A teologia descobre, não inventa",
+          "slug": "teologia-descobre-nao-inventa",
+          "resumo": "Ciência não cria fatos — reconhece os que já existem. Aplicado à teologia: não precisamos de uma nova Bíblia, precisamos descobrir o que já está nos 66 livros.",
+          "linhas": "13-19",
+          "densidade": "alta",
+          "usado": false
+        },
+        {
+          "titulo": "Deus revelou só o que quis que soubéssemos",
+          "slug": "o-que-deus-nao-revelou",
+          "resumo": "O que não está na Bíblia não é lacuna, é decisão. O silêncio da Escritura é o limite contra a especulação.",
+          "linhas": "7-9",
+          "densidade": "alta",
+          "usado": false
+        },
+        {
+          "titulo": "Homero era chamado de teólogo",
+          "slug": "teologo-antes-do-cristianismo",
+          "resumo": "Entre os gregos, quem tratava da natureza dos deuses era teólogo — Homero, Orfeu. O termo é mais antigo e mais largo do que o uso que fazemos dele.",
+          "linhas": "11-13",
+          "densidade": "média",
+          "usado": false
+        },
+        {
+          "titulo": "A fé não é cega",
+          "slug": "fe-nao-e-cega",
+          "resumo": "Fé como o tipo mais elevado de conhecimento, não como dispensa de pesquisa. \"Pela fé os mundos foram criados\" não encerra o assunto — abre.",
+          "linhas": "19-23",
+          "densidade": "média",
+          "usado": false
+        },
+        {
+          "titulo": "O seminário não ensina a Bíblia — ensina a estudá-la",
+          "slug": "seminario-ensina-a-estudar",
+          "resumo": "A expectativa comum sobre o seminário está trocada. Ele entrega método e fontes, não conteúdo pronto.",
+          "linhas": "3-5",
+          "densidade": "média",
+          "usado": false
+        }
+      ]
+    },
+    {
+      "arquivo": "base_docs/01 Introdução a Teologia/Aula 02 - Introdução à Teologia - Curso Básico - 1920x1080 4144K.md",
+      "curso": "Introdução à Teologia · Curso Básico — Renascer Instituto Teológico",
+      "modulo": "Aula 02",
+      "professor": "",
+      "temas": [
+        {
+          "titulo": "A primeira revelação de Deus não foi a Bíblia",
+          "slug": "primeira-revelacao-cosmos",
+          "resumo": "Antes do texto, o cosmos. A revelação exterior precede a interior — natureza e história já falavam de Deus antes de qualquer página escrita.",
+          "linhas": "3-5",
+          "densidade": "alta",
+          "usado": false
+        },
+        {
+          "titulo": "Teologia natural: o que se extrai da natureza",
+          "slug": "teologia-natural",
+          "resumo": "Da observação do mundo material se extrai teologia natural; a Escritura a suplementa com o que a natureza não alcança.",
+          "linhas": "11-13",
+          "densidade": "alta",
+          "usado": false
+        },
+        {
+          "titulo": "Doutrina forma caráter",
+          "slug": "doutrina-forma-carater",
+          "resumo": "Os cristãos mais firmes são os que têm segurança nas doutrinas. Piedade que a teologia sistemática fere já era piedade fraca.",
+          "linhas": "7-9",
+          "densidade": "média",
+          "usado": false
+        },
+        {
+          "titulo": "Os requisitos para estudar teologia",
+          "slug": "requisitos-mente-disciplinada",
+          "resumo": "Mente disciplinada, paciência e discernimento. Não vai cair do céu, não será da noite pro dia — a pressa é o que faz a maioria parar.",
+          "linhas": "13-17",
+          "densidade": "média",
+          "usado": false
+        }
+      ]
+    },
+    {
+      "arquivo": "base_docs/01 Introdução a Teologia/Aula 03 - Introdução à Teologia - Curso Básico - 1920x1080 4316K.md",
+      "curso": "Introdução à Teologia · Curso Básico — Renascer Instituto Teológico",
+      "modulo": "Aula 03",
+      "professor": "",
+      "temas": [
+        {
+          "titulo": "A teologia sistemática começou por volta do ano 120",
+          "slug": "teologia-comeca-em-120",
+          "resumo": "Credo dos apóstolos entre 120 e 150, Inácio em 115, Orígenes, Atanásio, Gregório de Nissa. Sistematizar doutrina não é invenção moderna.",
+          "linhas": "5-9",
+          "densidade": "alta",
+          "usado": false
+        },
+        {
+          "titulo": "As quatro causas de Pedro Lombardo",
+          "slug": "quatro-causas-lombardo",
+          "resumo": "Baseado em Aristóteles: matéria, forma, agente e finalidade. Tijolo e argamassa, o projeto, o construtor, a moradia — a estrutura que organizou a doutrina no Ocidente.",
+          "linhas": "13-17",
+          "densidade": "alta",
+          "usado": false
+        },
+        {
+          "titulo": "Niceia: o concílio que nasceu de uma negação",
+          "slug": "niceia-crise-ariana",
+          "resumo": "Constantino convoca bispos do Oriente e do Ocidente por causa de Ário, que pregava um Jesus homem e não Deus. O credo é resposta a uma crise, não exercício acadêmico.",
+          "linhas": "9-11",
+          "densidade": "alta",
+          "usado": false
+        },
+        {
+          "titulo": "Do Oriente ao Ocidente: o período escolástico",
+          "slug": "escolastica-oriente-ocidente",
+          "resumo": "Pedro Lombardo introduz, Tomás de Aquino leva ao clímax, e o escolasticismo termina no nominalismo de Ockham.",
+          "linhas": "11-19",
+          "densidade": "média",
+          "usado": false
+        }
+      ]
+    },
+    {
+      "arquivo": "base_docs/01 Introdução a Teologia/Aula 04 - Introdução à Teologia - Curso Básico - 1920x1080 3573K.md",
+      "curso": "Introdução à Teologia · Curso Básico — Renascer Instituto Teológico",
+      "modulo": "Aula 04",
+      "professor": "",
+      "temas": [
+        {
+          "titulo": "As 95 teses não eram provocação",
+          "slug": "porta-de-wittenberg-era-mural",
+          "resumo": "A porta da universidade funcionava como mural público. Lutero não estava batendo de frente — estava publicando para ser lido.",
+          "linhas": "5",
+          "densidade": "alta",
+          "usado": false
+        },
+        {
+          "titulo": "É, contém, ou se torna: as três escolas diante da Bíblia",
+          "slug": "e-contem-se-torna",
+          "resumo": "O ortodoxo diz que a Bíblia É a palavra de Deus; o neo-ortodoxo, que ela contém; o liberal, que ela se torna. Três verbos, três teologias inteiras.",
+          "linhas": "15-17",
+          "densidade": "alta",
+          "usado": false
+        },
+        {
+          "titulo": "O que Lutero não conseguiu soltar",
+          "slug": "lutero-costumes-romanistas",
+          "resumo": "A teologia luterana manteve costumes romanistas — inclusive na leitura do isto é o meu corpo. A reformada nasce para cortar esse fio.",
+          "linhas": "3-11",
+          "densidade": "alta",
+          "usado": false
+        },
+        {
+          "titulo": "Deus não existe — Deus É",
+          "slug": "deus-nao-existe-deus-e",
+          "resumo": "Existir pressupõe ter sido criado: a caneta existe porque alguém a fez. Deus nunca foi criado, então está na categoria do É.",
+          "linhas": "21",
+          "densidade": "alta",
+          "usado": false
+        },
+        {
+          "titulo": "A revelação no tribunal da razão",
+          "slug": "teologia-racionalista",
+          "resumo": "O racionalismo iluminista não harmonizou razão e revelação — submeteu uma à outra, com a tarefa de purificar a fé de todo elemento sobrenatural.",
+          "linhas": "11-13",
+          "densidade": "média",
+          "usado": false
+        },
+        {
+          "titulo": "O argumento ontológico e a crítica de Tomás",
+          "slug": "argumento-ontologico",
+          "resumo": "Se Deus é o ser que tem todas as perfeições, e existir é uma perfeição, sua existência seria evidente. Tomás de Aquino responde: evidente para quem?",
+          "linhas": "21-25",
+          "densidade": "média",
+          "usado": false
+        }
+      ]
+    },
+    {
+      "arquivo": "base_docs/01 Introdução a Teologia/Aula 05 - Introdução à Teologia - Curso Básico - 1920x1080 3546K.md",
+      "curso": "Introdução à Teologia · Curso Básico — Renascer Instituto Teológico",
+      "modulo": "Aula 05",
+      "professor": "",
+      "temas": [
+        {
+          "titulo": "A Bíblia não prova Deus — ela pressupõe",
+          "slug": "biblia-pressupoe-deus",
+          "resumo": "Gênesis não abre argumentando. Começa no no princípio tomando a existência de Deus como proposição básica, não como tese a defender.",
+          "linhas": "9",
+          "densidade": "alta",
+          "usado": false
+        },
+        {
+          "titulo": "As três ordens de prova da existência de Deus",
+          "slug": "tres-provas-existencia-deus",
+          "resumo": "Metafísicas (movimento, causalidade, contingência, graus de perfeição), morais (obrigação, aspiração da alma, ideia universal, experiência religiosa) e bíblicas.",
+          "linhas": "3-9",
+          "densidade": "alta",
+          "usado": false
+        },
+        {
+          "titulo": "Pros ton theon: face a face",
+          "slug": "pros-ton-theon-face-a-face",
+          "resumo": "No grego de João 1.1, o verbo estava com Deus carrega a ideia de duas pessoas tão próximas que sentem a respiração uma da outra.",
+          "linhas": "19-23",
+          "densidade": "alta",
+          "usado": false
+        },
+        {
+          "titulo": "Esvaziar-se não é perder — é trocar de forma",
+          "slug": "kenosis-trocar-de-forma",
+          "resumo": "A palavra de Filipenses 2 significa deixar uma forma e receber outra. Jesus deixa a forma da glória e assume a humana.",
+          "linhas": "19",
+          "densidade": "média",
+          "usado": false
+        },
+        {
+          "titulo": "A natureza reconheceu — os seus, não",
+          "slug": "natureza-reconheceu-jesus",
+          "resumo": "O vento, as ondas, a figueira, os pães obedeceram. Veio para o que era seu e os seus não o receberam. O contraste é o argumento.",
+          "linhas": "25-27",
+          "densidade": "alta",
+          "usado": false
+        }
+      ]
+    },
+    {
+      "arquivo": "base_docs/01 Introdução a Teologia/Aula 06 - Introdução à Teologia - Curso Básico - 1920x1080 4844K.md",
+      "curso": "Introdução à Teologia · Curso Básico — Renascer Instituto Teológico",
+      "modulo": "Aula 06",
+      "professor": "",
+      "temas": [
+        {
+          "titulo": "Onipotência moral: Deus não pode pecar",
+          "slug": "onipotencia-moral",
+          "resumo": "Há uma onipotência física — poder criar e sustentar — e uma moral: Deus é tão poderoso que não pode praticar o mal nem ser tentado.",
+          "linhas": "17-19",
+          "densidade": "alta",
+          "usado": false
+        },
+        {
+          "titulo": "Deus é simples — não é feito de partes",
+          "slug": "simplicidade-de-deus",
+          "resumo": "Simplicidade aqui não é o oposto de complexo. É não ser composto: todo composto depende das partes, e quem depende é ser secundário.",
+          "linhas": "13-15",
+          "densidade": "alta",
+          "usado": false
+        },
+        {
+          "titulo": "Espírito, mas espírito pessoal",
+          "slug": "espirito-pessoal",
+          "resumo": "Dizer que Deus é espírito ainda deixa vago. Pessoal é o que acrescenta pensamento, sentimento, vontade e consciência própria.",
+          "linhas": "7-11",
+          "densidade": "alta",
+          "usado": false
+        },
+        {
+          "titulo": "Os atributos naturais de Deus",
+          "slug": "atributos-naturais",
+          "resumo": "Simplicidade, unicidade, infinidade, imensidade, imutabilidade, onisciência, onipotência — o vocabulário que a sistemática usa para falar do que Deus é.",
+          "linhas": "13-19",
+          "densidade": "alta",
+          "usado": false
+        },
+        {
+          "titulo": "Para Deus, o espaço não existe",
+          "slug": "onipresenca-espaco",
+          "resumo": "A onipresença não é Deus espalhado por todo lugar ocupando espaço. É agir em qualquer ponto com a mesma facilidade com que pensa.",
+          "linhas": "19-21",
+          "densidade": "média",
+          "usado": false
+        }
+      ]
+    },
+    {
+      "arquivo": "base_docs/01 Introdução a Teologia/Aula 07 - Introdução à Teologia - Curso Básico - 1920x1080 3452K.md",
+      "curso": "Introdução à Teologia · Curso Básico — Renascer Instituto Teológico",
+      "modulo": "Aula 07",
+      "professor": "",
+      "temas": [
+        {
+          "titulo": "A palavra trindade não aparece na Bíblia",
+          "slug": "trindade-palavra-nao-biblica",
+          "resumo": "Não há versículo que diga trindade. Há textos que mostram o Pai, o Filho e o Espírito como Deus — a palavra é a formulação que a igreja deu ao que os textos sustentam.",
+          "linhas": "7-9",
+          "densidade": "alta",
+          "usado": false
+        },
+        {
+          "titulo": "O nascimento de Jesus não foi o começo dele",
+          "slug": "nascimento-nao-e-comeco",
+          "resumo": "Quando o anjo fala com Maria, não começa uma existência: começa uma apresentação ao mundo. Todas as coisas foram feitas por ele.",
+          "linhas": "3-5",
+          "densidade": "alta",
+          "usado": false
+        },
+        {
+          "titulo": "Antropomorfismo: as mãos de Deus",
+          "slug": "antropomorfismo",
+          "resumo": "Deus é espírito — então mãos, olhos, boca e ira são características humanas atribuídas a Deus, porque era a única forma de nos alcançar.",
+          "linhas": "15-17",
+          "densidade": "alta",
+          "usado": false
+        },
+        {
+          "titulo": "A trindade já está no Antigo Testamento",
+          "slug": "trindade-antigo-testamento",
+          "resumo": "Façamos o homem, o tri-ságio de Isaías 6, o Anjo do Senhor, a descrição do Messias — base para a doutrina antes de qualquer concílio.",
+          "linhas": "11-13",
+          "densidade": "média",
+          "usado": false
+        },
+        {
+          "titulo": "A doutrina se formou no choque das controvérsias",
+          "slug": "doutrina-nasce-da-controversia",
+          "resumo": "A trindade não foi formulada pelos escritores do Novo Testamento. Levou tempo, reflexão e oposição até cristalizar em forma dogmática.",
+          "linhas": "9-11",
+          "densidade": "média",
+          "usado": false
+        }
+      ]
+    }
+  ]
+}
