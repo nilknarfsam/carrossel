@@ -21,14 +21,23 @@ Abrir **só as linhas indicadas** da transcrição, não a aula inteira.
 ## 2. Escrever o roteiro
 
 Gravar `carrosseis/<slug>/roteiro.json` no formato de `roteiro.exemplo.json`.
-De 4 a 6 slides. Estrutura que funciona:
+De 4 a 8 slides, conforme a sequência.
 
-| # | tipo | função |
-|---|------|--------|
-| 1 | `capa` | a tensão — o que o leitor pensa que sabe |
-| 2-4 | `ponto` | o desenvolvimento, um movimento por slide |
-| — | `texto-biblico` | opcional, quando a aula ancora num texto |
-| último | `fecho` | o fechamento + crédito |
+**Escolher a sequência antes de escrever a primeira frase.** A estrutura vem
+do formato do argumento, não do gosto do dia — as seis estão em
+[sequencias.md](sequencias.md), com o tipo de tema que cada uma serve:
+
+| Sequência | Quando o tema é |
+|---|---|
+| **Argumento** | um raciocínio que se desenvolve (padrão) |
+| **Distinção** | uma palavra que parece dizer uma coisa e diz outra |
+| **Lista** | um conjunto nomeado pela própria aula |
+| **Comparação** | duas ou três posições diante da mesma questão |
+| **História** | uma coisa que aconteceu, e a data ou a ordem surpreende |
+| **Texto** | uma passagem cujo original ou contexto vira a chave |
+
+O `fecho` pode levar um campo `convite` — uma linha pedindo **uma** coisa.
+A seta `→` de avanço é automática e some no último slide.
 
 Regras de escrita:
 
@@ -80,22 +89,26 @@ codex exec -C "$(pwd)" -s workspace-write --skip-git-repo-check \
    Formato retrato 3:4. Salve como ./carrosseis/<slug>/assets/01-fundo.png"
 ```
 
-O template escurece e dessatura a arte, e o texto fica por cima. Então:
+**Ler [arte.md](arte.md) antes de escrever o primeiro prompt.** Ele traz a
+fórmula de seis blocos, o parágrafo de DNA que mantém a série coesa, a tabela
+que traduz argumento em objeto e o checklist de aceitação.
 
-- **Nunca pedir texto, letras ou números na imagem.** Nenhum.
-- Pedir textura e atmosfera, não ilustração narrativa: materiais, luz,
-  superfícies, formas abstratas. Composição com o peso na metade de cima —
-  a de baixo fica coberta pelo véu.
-- Ancorar no mundo do assunto: pergaminho, pedra, tinta, tecido, arquitetura,
-  paisagem do Oriente Próximo, luz de janela alta.
-- **Sem figuras humanas com rosto**, sem representação de Jesus, sem cenas
-  bíblicas literais.
+O resumo, que não substitui a leitura:
 
-Consistência da série: gerar o slide 1 primeiro, revisar, e passar ele como
-referência (`--ref`) nos demais, pra paleta e textura não mudarem no meio
-do carrossel.
+- Cada imagem tem **um sujeito concreto**, escolhido pelo que o slide
+  argumenta. Metonímia, não legenda: desenhe a coisa com que a frase pensa,
+  não a frase.
+- O template mata cor e detalhe fino. O que sobrevive é **valor** e
+  **silhueta**, e só na faixa dos 38% de altura. Massa na metade de cima.
+- **Nunca pedir texto, letras ou números.** Nenhum.
+- **Sem rosto humano**, sem representação de Jesus, sem cena bíblica literal,
+  sem clichê evangélico (cruz em contraluz, pomba, Bíblia aberta iluminada).
 
-Depois de gerar, **olhar cada imagem** e regerar a que não servir.
+Gerar o **slide 1 primeiro** e olhar antes de seguir. O DNA da série é o
+mesmo parágrafo colado em todos os seis prompts — é ele que segura a unidade.
+
+Depois de gerar, **olhar cada imagem** e regerar a que não passar no
+checklist do `arte.md`.
 
 ## 4. Renderizar
 
@@ -107,6 +120,10 @@ Sai `slides/` (1080x1440) e `slides-story/` (1080x1920).
 Conferir os PNGs — principalmente se alguma frase estourou o slide.
 Se estourou, encurtar a frase no roteiro e rodar de novo. Nunca diminuir a
 fonte no template: o tamanho do tipo é a identidade da série.
+
+Mostrar os slides e perguntar **quais precisam de ajuste**. Corrigir só os
+citados e renderizar de novo — não reescrever o carrossel inteiro por causa de
+um slide. Refazer do zero só se a direção mudar de fato.
 
 ## 5. Fechar
 
@@ -131,13 +148,15 @@ O autor do carrossel é o Franklin: ele estudou o curso e está reescrevendo o
 conteúdo mastigado para quem não vai assistir sete aulas. Não é uma citação
 de professor — é ensino de segunda mão, assumido como tal.
 
-- **Nenhum nome de pessoa nos slides.** Nem o do Franklin, nem o do professor.
+- **Nenhum nome nos slides.** Nem de pessoa, nem de instituição, nem de curso.
 - A identidade é o **@ do Instagram no rodapé**, em todo slide: campo
-  `assinatura` no roteiro, hoje `@samfiledsoak`.
-- No `fecho`, o campo `credito` diz **onde o conteúdo foi estudado** — a
-  instituição e o curso, não uma pessoa. É o que separa "reescrevi o que
-  aprendi" de "inventei".
-- A legenda repete a fonte por extenso.
+  `assinatura` no roteiro, hoje `@samfiledsoak`. É a única atribuição.
+- O campo `credito` do `fecho` fica **vazio por padrão** — o fecho é a frase
+  e mais nada. Ele existe no template para o dia em que um carrossel precisar
+  creditar alguma fonte, e só entra se o Franklin pedir.
+- A legenda também não cita curso nem instituição.
 
-Se um dia o carrossel não vier de um curso (assunto próprio, outro tema),
-o `credito` sai e sobra a assinatura.
+A rastreabilidade continua existindo onde ela serve para o trabalho: o campo
+`origem` de cada slide, que aponta arquivo e linhas da transcrição. Isso é
+controle interno de fidelidade, não crédito público — nunca vai para o slide
+nem para a legenda.

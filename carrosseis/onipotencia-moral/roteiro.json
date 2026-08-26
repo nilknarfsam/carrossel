@@ -1,15 +1,21 @@
 {
-  "serie": "Introdução à Teologia",
-  "modulo": "Aula 06",
+  "serie": "Atributos de Deus",
   "tema": "Onipotência moral: Deus não pode pecar",
   "slug": "onipotencia-moral",
   "assinatura": "@samfiledsoak",
-  "legenda": "Quando alguém diz que Deus não pode pecar, soa como se faltasse alguma coisa. Falta poder? Falta liberdade?\n\nA teologia sistemática separa a onipotência em duas. A física é a que todo mundo lembra: poder para criar, sustentar e governar tudo o que existe. A moral é a que quase ninguém cita, e é ela que responde a pergunta — Deus é tão poderoso que não pode praticar o mal, e nem sequer pode ser tentado.\n\nO impedimento não vem de fora. Não há uma regra acima de Deus proibindo. Ele não pode praticar nenhum ato que discorde da própria natureza moral. E pelo lado positivo a mesma coisa: não há bem que Deus não possa fazer.\n\nOnipotência não é poder fazer qualquer coisa. É ser inteiramente o que se é, sem exceção e sem falha.\n\nEstudado no Renascer Instituto Teológico, Curso Básico de Teologia — Introdução à Teologia, aula 06. Reescrito aqui para quem não vai assistir sete aulas.",
-  "hashtags": ["#teologia", "#teologiasistematica", "#estudobiblico", "#doutrina", "#atributosdedeus", "#fesolida"],
+  "legenda": "Quando alguém diz que Deus não pode pecar, soa como se faltasse alguma coisa. Falta poder? Falta liberdade?\n\nA teologia sistemática separa a onipotência em duas. A física é a que todo mundo lembra: poder para criar, sustentar e governar tudo o que existe. A moral é a que quase ninguém cita, e é ela que responde a pergunta — Deus é tão poderoso que não pode praticar o mal, e nem sequer pode ser tentado.\n\nO impedimento não vem de fora. Não há uma regra acima de Deus proibindo. Ele não pode praticar nenhum ato que discorde da própria natureza moral. E pelo lado positivo a mesma coisa: não há bem que Deus não possa fazer.\n\nOnipotência não é poder fazer qualquer coisa. É ser inteiramente o que se é, sem exceção e sem falha.",
+  "hashtags": [
+    "#teologia",
+    "#teologiasistematica",
+    "#estudobiblico",
+    "#doutrina",
+    "#atributosdedeus",
+    "#fesolida"
+  ],
   "slides": [
     {
       "tipo": "capa",
-      "sobrancelha": "Atributos de Deus · 06",
+      "sobrancelha": "Teologia sistemática",
       "titulo": "Deus **não pode** pecar.",
       "apoio": "E isso não é falta de poder. É exatamente o contrário.",
       "arte": "assets/01-fundo.png",
@@ -50,9 +56,9 @@
     {
       "tipo": "fecho",
       "frase": "Onipotência não é poder tudo. É não poder **deixar de ser bom**.",
-      "credito": "Estudado no <strong>Renascer Instituto Teológico</strong> — Curso Básico, Introdução à Teologia. Reescrito para este formato.",
       "arte": "assets/06-fundo.png",
-      "origem": "base_docs/01 Introdução a Teologia/Aula 06 · linhas 17-19"
+      "origem": "base_docs/01 Introdução a Teologia/Aula 06 · linhas 17-19",
+      "convite": "Salve para reler."
     }
   ]
 }

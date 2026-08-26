@@ -34,9 +34,11 @@ válido, serve pra validar tipografia antes de gerar imagem.
 - Ouro (`#C8A22B`) só em três lugares: sobrancelha, termo grifado, marca da trilha.
 - Frase estourou o slide? Encurtar a frase — nunca diminuir a fonte.
 - Campo `origem` obrigatório em todo slide (arquivo + linhas da transcrição).
-- **Nenhum nome de pessoa nos slides.** A assinatura é o `@` do Instagram no
-  rodapé (`assinatura` no roteiro, hoje `@samfiledsoak`); o `credito` do fecho
-  nomeia a instituição e o curso onde o conteúdo foi estudado, não uma pessoa.
+- **Nenhum nome nos slides** — nem pessoa, nem instituição, nem curso. A única
+  atribuição é o `@` do Instagram no rodapé (`assinatura` no roteiro, hoje
+  `@samfiledsoak`). O `credito` do fecho fica vazio salvo pedido explícito.
+- A arte de cada slide é dirigida, não decorativa: ver
+  `.claude/skills/carrossel/arte.md`.
 - Nome próprio, data, termo técnico e referência bíblica se conferem no **ebook
   em PDF** do curso antes de virar slide — a transcrição é ASR e erra grafia.
 

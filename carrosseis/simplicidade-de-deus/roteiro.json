@@ -1,15 +1,21 @@
 {
-  "serie": "Introdução à Teologia",
-  "modulo": "Aula 06",
+  "serie": "Atributos de Deus",
   "tema": "Deus é simples — não é feito de partes",
   "slug": "simplicidade-de-deus",
   "assinatura": "@samfiledsoak",
-  "legenda": "Simplicidade é um atributo de Deus. E quase todo mundo entende errado, porque em português simples é o oposto de complexo — e não é disso que a teologia está falando.\n\nSimples aqui é o oposto de composto. Deus não é feito de partes: nem quantitativas, nem metafísicas, nem lógicas. Não existe um pedaço de Deus.\n\nO argumento é curto e fecha sozinho. Todo composto depende necessariamente dos elementos que o constituem. Quem depende de outra coisa para ser o que é, é um ser secundário, derivado. Deus é o ser absolutamente primeiro — logo, não pode ser composto de forma alguma.\n\nE é daí que sai a unicidade, o atributo seguinte: dois seres infinitamente perfeitos seria contradição, porque faltaria alguma perfeição em ambos, e nenhum dos dois seria Deus.\n\nEstudado no Renascer Instituto Teológico, Curso Básico de Teologia — Introdução à Teologia, aula 06. Reescrito aqui para quem não vai assistir sete aulas.",
-  "hashtags": ["#teologia", "#teologiasistematica", "#estudobiblico", "#doutrina", "#atributosdedeus", "#simplicidadedivina"],
+  "legenda": "Simplicidade é um atributo de Deus. E quase todo mundo entende errado, porque em português simples é o oposto de complexo — e não é disso que a teologia está falando.\n\nSimples aqui é o oposto de composto. Deus não é feito de partes: nem quantitativas, nem metafísicas, nem lógicas. Não existe um pedaço de Deus.\n\nO argumento é curto e fecha sozinho. Todo composto depende necessariamente dos elementos que o constituem. Quem depende de outra coisa para ser o que é, é um ser secundário, derivado. Deus é o ser absolutamente primeiro — logo, não pode ser composto de forma alguma.\n\nE é daí que sai a unicidade, o atributo seguinte: dois seres infinitamente perfeitos seria contradição, porque faltaria alguma perfeição em ambos, e nenhum dos dois seria Deus.",
+  "hashtags": [
+    "#teologia",
+    "#teologiasistematica",
+    "#estudobiblico",
+    "#doutrina",
+    "#atributosdedeus",
+    "#simplicidadedivina"
+  ],
   "slides": [
     {
       "tipo": "capa",
-      "sobrancelha": "Atributos de Deus · 06",
+      "sobrancelha": "Teologia sistemática",
       "titulo": "Deus é **simples**.",
       "apoio": "E não tem nada a ver com ser fácil de entender.",
       "arte": "assets/01-fundo.png",
@@ -50,9 +56,9 @@
     {
       "tipo": "fecho",
       "frase": "Não existe um pedaço de Deus. Só existe Deus.",
-      "credito": "Estudado no <strong>Renascer Instituto Teológico</strong> — Curso Básico, Introdução à Teologia. Reescrito para este formato.",
       "arte": "assets/06-fundo.png",
-      "origem": "base_docs/01 Introdução a Teologia/Aula 06 · linhas 13-17"
+      "origem": "base_docs/01 Introdução a Teologia/Aula 06 · linhas 13-17",
+      "convite": "Salve para reler."
     }
   ]
 }

@@ -143,6 +143,19 @@
     font-size:20px; letter-spacing:.12em; color:var(--osso-fosco);
   }
 
+  /* seta de avanço — some no último slide, que não tem para onde mandar */
+  .avanco{
+    position:absolute; right:var(--pad); bottom:var(--pad); z-index:3;
+    font-family:'IBM Plex Mono',monospace;
+    font-size:26px; line-height:1; color:var(--osso-fosco);
+  }
+
+  /* convite do fecho — uma linha, acima da assinatura */
+  .convite{
+    font-family:'IBM Plex Mono',monospace;
+    font-size:22px; letter-spacing:.06em; color:var(--osso);
+  }
+
   .marcador{
     position:absolute; right:var(--pad); top:var(--pad); z-index:3;
     font-family:'IBM Plex Mono',monospace;
@@ -166,7 +179,7 @@ document.body.innerHTML = R.slides.map((s, i) => {
   const passo   = 100 / total;
   const topo    = (passo * i).toFixed(3);
   const arte    = s.arte ? `<div class="arte" style="background-image:url('${s.arte}')"></div>` : "";
-  const ref     = esc(R.modulo || R.serie);
+  const ref     = esc(R.serie || R.modulo);
 
   let bloco = "";
   if (s.tipo === "capa") {
@@ -181,6 +194,7 @@ document.body.innerHTML = R.slides.map((s, i) => {
   } else if (s.tipo === "fecho") {
     bloco = `
       <p class="frase">${mk(s.frase)}</p>
+      ${s.convite ? `<div class="convite">${esc(s.convite)}</div>` : ""}
       ${s.credito ? `<div class="credito">${s.credito}</div>` : ""}`;
   } else {
     bloco = `
@@ -199,6 +213,7 @@ document.body.innerHTML = R.slides.map((s, i) => {
     </div>
     <div class="marcador">${String(i+1).padStart(2,"0")} / ${String(total).padStart(2,"0")}</div>
     ${assinatura ? `<div class="assinatura">${esc(assinatura)}</div>` : ""}
+    ${i < total - 1 ? `<div class="avanco">&rarr;</div>` : ""}
     <div class="corpo">${bloco}</div>
   </section>`;
 }).join("");

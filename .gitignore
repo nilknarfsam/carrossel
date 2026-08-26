@@ -13,3 +13,6 @@ saida/
 
 # resíduo da extração do kit
 mnt/
+
+# referencias de terceiros (material licenciado, repo publico)
+referencias/

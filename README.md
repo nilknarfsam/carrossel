@@ -78,9 +78,15 @@ uma aula real, com origem rastreável. É o mesmo princípio do campo `origem`
 no roteiro, só que visível pra quem lê.
 
 **A assinatura no rodapé.** O `@` do Instagram em mono, no canto inferior
-esquerdo, no mesmo peso do marcador de posição. Nenhum nome de pessoa entra
-no slide: o crédito do fecho nomeia a instituição e o curso onde o conteúdo
-foi estudado. O carrossel é ensino de segunda mão, assumido como tal.
+esquerdo, no mesmo peso do marcador de posição no canto oposto. É a única
+atribuição que entra no slide — nenhum nome de pessoa, de instituição ou de
+curso. O rastro de origem existe no campo `origem` do roteiro, que é controle
+de fidelidade de quem produz, não crédito de quem lê.
+
+**A arte é dirigida.** `arte.md`, dentro da skill, traz a fórmula de prompt em
+seis blocos, o parágrafo de DNA que mantém a série coesa e a tabela que traduz
+argumento em objeto. A regra que resume: não desenhe a frase, desenhe a coisa
+com que a frase pensa.
 
 **A regra que não se quebra:** texto vive no template, nunca na imagem
 generativa. A arte entra escurecida e dessaturada, como atmosfera atrás do
