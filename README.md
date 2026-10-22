@@ -1,3 +1,12 @@
+<!-- organizacao-github:inicio -->
+> [!NOTE]
+> **📌 Organização do GitHub (22/10/2026): ✅ MANTER**
+>
+> Kit pequeno e completo.
+>
+> _Nota temporária do Claude. Some quando a organização terminar._
+<!-- organizacao-github:fim -->
+
 # Carrossel de ensino — kit
 
 Pipeline: transcrições `.md` → índice de temas → roteiro → artes (Codex/gpt-image-2) → PNGs.
